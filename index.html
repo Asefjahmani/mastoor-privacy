@@ -1,355 +1,213 @@
-cat > privacy_policy.html << 'EOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mastoor - Privacy Policy</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0D0D1A;
-      color: #E0E0E0;
-      line-height: 1.7;
-      padding: 0;
-    }
-    .header {
-      background: linear-gradient(135deg, #6C63FF, #1A1A2E);
-      padding: 60px 24px 40px;
-      text-align: center;
-    }
-    .header .icon {
-      width: 80px;
-      height: 80px;
-      background: rgba(255,255,255,0.15);
-      border-radius: 22px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-      font-size: 36px;
-    }
-    .header h1 {
-      font-size: 32px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 8px;
-    }
-    .header p {
-      color: rgba(255,255,255,0.7);
-      font-size: 15px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
-    }
-    .last-updated {
-      background: rgba(108, 99, 255, 0.15);
-      border: 1px solid rgba(108, 99, 255, 0.3);
-      border-radius: 10px;
-      padding: 12px 16px;
-      margin-bottom: 40px;
-      color: #6C63FF;
-      font-size: 14px;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    .section h2 {
-      font-size: 20px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid rgba(108, 99, 255, 0.3);
-    }
-    .section h3 {
-      font-size: 16px;
-      font-weight: 600;
-      color: #A89FFF;
-      margin: 16px 0 8px;
-    }
-    .section p {
-      color: #B0B0C0;
-      margin-bottom: 12px;
-      font-size: 15px;
-    }
-    .section ul {
-      list-style: none;
-      margin-bottom: 12px;
-    }
-    .section ul li {
-      color: #B0B0C0;
-      font-size: 15px;
-      padding: 4px 0 4px 20px;
-      position: relative;
-    }
-    .section ul li::before {
-      content: "•";
-      color: #6C63FF;
-      position: absolute;
-      left: 0;
-    }
-    .highlight-box {
-      background: rgba(108, 99, 255, 0.1);
-      border: 1px solid rgba(108, 99, 255, 0.25);
-      border-radius: 12px;
-      padding: 20px;
-      margin: 16px 0;
-    }
-    .highlight-box p {
-      color: #C0B8FF;
-      margin: 0;
-      font-size: 15px;
-    }
-    .no-collect-box {
-      background: rgba(76, 175, 80, 0.1);
-      border: 1px solid rgba(76, 175, 80, 0.25);
-      border-radius: 12px;
-      padding: 20px;
-      margin: 16px 0;
-    }
-    .no-collect-box h3 {
-      color: #4CAF50 !important;
-      margin-top: 0 !important;
-    }
-    .no-collect-box li::before {
-      color: #4CAF50 !important;
-    }
-    .no-collect-box li {
-      color: #A0D4A1 !important;
-    }
-    .warning-box {
-      background: rgba(255, 152, 0, 0.1);
-      border: 1px solid rgba(255, 152, 0, 0.25);
-      border-radius: 12px;
-      padding: 20px;
-      margin: 16px 0;
-    }
-    .warning-box p {
-      color: #FFB74D;
-      margin: 0;
-      font-size: 15px;
-    }
-    .contact-box {
-      background: rgba(108, 99, 255, 0.1);
-      border: 1px solid rgba(108, 99, 255, 0.3);
-      border-radius: 16px;
-      padding: 24px;
-      text-align: center;
-      margin-top: 40px;
-    }
-    .contact-box h2 {
-      border: none;
-      margin-bottom: 8px;
-    }
-    .contact-box a {
-      color: #6C63FF;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .contact-box a:hover {
-      text-decoration: underline;
-    }
-    .footer {
-      text-align: center;
-      padding: 24px;
-      color: #555570;
-      font-size: 13px;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mastoor - Privacy Policy</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0a0a0f;
+    color: #e0e0e8;
+    line-height: 1.7;
+  }
+  header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(135deg, #1a0a2e 0%, #0d1117 100%);
+    border-bottom: 1px solid #2a2a3e;
+  }
+  .logo { font-size: 48px; margin-bottom: 12px; }
+  header h1 { font-size: 2rem; color: #a78bfa; font-weight: 700; }
+  header p { color: #888; margin-top: 8px; font-size: 0.9rem; }
+  .container { max-width: 800px; margin: 0 auto; padding: 40px 24px 80px; }
+  h2 {
+    font-size: 1.2rem;
+    color: #a78bfa;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #2a2a3e;
+  }
+  h3 { font-size: 1rem; color: #c4b5fd; margin: 24px 0 10px; }
+  p { color: #b0b0c0; margin-bottom: 12px; }
+  ul { color: #b0b0c0; padding-left: 20px; margin-bottom: 12px; }
+  ul li { margin-bottom: 6px; }
+  .badge {
+    display: inline-block;
+    background: #1e1b2e;
+    border: 1px solid #3d3560;
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 0.8rem;
+    color: #a78bfa;
+    margin-bottom: 20px;
+  }
+  .highlight-box {
+    background: #12102a;
+    border: 1px solid #3d3560;
+    border-left: 3px solid #a78bfa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    color: #c4b5fd;
+  }
+  .warning-box {
+    background: #1a120a;
+    border: 1px solid #5a3e1e;
+    border-left: 3px solid #f59e0b;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    color: #fcd34d;
+  }
+  .no-list { list-style: none; padding-left: 0; }
+  .no-list li::before { content: "✗ "; color: #ef4444; }
+  .yes-list { list-style: none; padding-left: 0; }
+  .yes-list li::before { content: "✓ "; color: #22c55e; }
+  a { color: #a78bfa; }
+  footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #2a2a3e;
+    color: #555;
+    font-size: 0.85rem;
+  }
+</style>
 </head>
 <body>
+<header>
+  <div class="logo">🔒</div>
+  <h1>Mastoor</h1>
+  <p>Privacy Policy</p>
+  <p>📅 Last Updated: April 27, 2026</p>
+</header>
 
-  <div class="header">
-    <div class="icon">🔒</div>
-    <h1>Mastoor</h1>
-    <p>Privacy Policy</p>
+<div class="container">
+
+  <h2>1. Introduction</h2>
+  <p>Mastoor is a private family messaging application developed by Machkit LTD. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application.</p>
+  <p>We built Mastoor with a privacy-first approach. Our core principle is simple: <strong>your conversations belong to you and no one else.</strong></p>
+
+  <h2>2. Information We Collect</h2>
+  <h3>2.1 Information You Provide</h3>
+  <ul>
+    <li>Username (chosen by you, no real name required)</li>
+    <li>Display name (chosen by you)</li>
+    <li>Messages and media (stored locally on your device only)</li>
+  </ul>
+
+  <h3>We Do NOT Collect</h3>
+  <ul class="no-list">
+    <li>Phone number</li>
+    <li>Email address</li>
+    <li>Real name or identity</li>
+    <li>Location data</li>
+    <li>Contacts list</li>
+    <li>Browsing history</li>
+    <li>Biometric data</li>
+  </ul>
+
+  <h3>2.2 Technical Information</h3>
+  <ul>
+    <li>Device token for push notifications</li>
+    <li>Public encryption key (used for end-to-end encryption only)</li>
+    <li>Subscription status (active/inactive — no payment details)</li>
+  </ul>
+
+  <h2>3. How We Use Your Information</h2>
+  <h3>3.1 Messages and Media</h3>
+  <div class="highlight-box">
+    🔐 All messages and media are end-to-end encrypted using AES-256-GCM encryption. Messages are encrypted on your device before transmission, transmitted in encrypted form only, stored locally on recipient devices, and never stored on our servers in readable form. <strong>We cannot read your messages under any circumstances.</strong>
   </div>
 
-  <div class="container">
+  <h3>3.2 Username and Display Name</h3>
+  <p>Used solely to identify you within your family group. Your username is visible only to members of groups you join.</p>
 
-    <div class="last-updated">
-      📅 Last Updated: April 25, 2026
-    </div>
+  <h3>3.3 Push Notifications</h3>
+  <p>Your device token is used solely to deliver push notifications. We do not use it for tracking or advertising.</p>
 
-    <!-- Section 1 -->
-    <div class="section">
-      <h2>1. Introduction</h2>
-      <p>Mastoor is a private family messaging application developed by Machkit LTD. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application.</p>
-      <p>We built Mastoor with a privacy-first approach. Our core principle is simple: <strong style="color:#fff">your conversations belong to you and no one else.</strong></p>
-    </div>
+  <h3>3.4 Subscriptions</h3>
+  <p>Subscription management is handled by a third-party provider. We receive only subscription status information. We do not receive or store payment information.</p>
 
-    <!-- Section 2 -->
-    <div class="section">
-      <h2>2. Information We Collect</h2>
+  <h2>4. Data Storage and Security</h2>
+  <h3>4.1 Local Storage</h3>
+  <p>All messages, media, and conversation history are stored locally on your device using an encrypted database. This data never leaves your device in readable form.</p>
 
-      <h3>2.1 Information You Provide</h3>
-      <ul>
-        <li>Username (chosen by you, no real name required)</li>
-        <li>Display name (chosen by you)</li>
-        <li>Messages and media (stored locally on your device only)</li>
-      </ul>
-
-      <div class="no-collect-box">
-        <h3>✓ We Do NOT Collect</h3>
-        <ul>
-          <li>Phone number</li>
-          <li>Email address</li>
-          <li>Real name or identity</li>
-          <li>Location data</li>
-          <li>Contacts list</li>
-          <li>Browsing history</li>
-          <li>Biometric data</li>
-        </ul>
-      </div>
-
-      <h3>2.2 Technical Information</h3>
-      <ul>
-        <li>Device token for push notifications</li>
-        <li>Public encryption key (used for end-to-end encryption only)</li>
-        <li>Subscription status (active/inactive — no payment details)</li>
-      </ul>
-    </div>
-
-    <!-- Section 3 -->
-    <div class="section">
-      <h2>3. How We Use Your Information</h2>
-
-      <h3>3.1 Messages and Media</h3>
-      <div class="highlight-box">
-        <p>🔐 All messages and media are end-to-end encrypted using AES-256-GCM encryption. Messages are encrypted on your device before transmission, transmitted in encrypted form only, stored locally on recipient devices, and never stored on our servers in readable form. <strong style="color:#fff">We cannot read your messages under any circumstances.</strong></p>
-      </div>
-
-      <h3>3.2 Username and Display Name</h3>
-      <p>Used solely to identify you within your family group. Your username is visible only to members of groups you join.</p>
-
-      <h3>3.3 Push Notifications</h3>
-      <p>Your device token is used solely to deliver push notifications. We do not use it for tracking or advertising.</p>
-
-      <h3>3.4 Subscriptions</h3>
-      <p>Subscription management is handled by a third-party provider. We receive only subscription status information. We do not receive or store payment information.</p>
-    </div>
-
-    <!-- Section 4 -->
-    <div class="section">
-      <h2>4. Data Storage and Security</h2>
-
-      <h3>4.1 Local Storage</h3>
-      <p>All messages, media, and conversation history are stored locally on your device using an encrypted database. This data never leaves your device in readable form.</p>
-
-      <h3>4.2 Server Storage</h3>
-      <p>Our servers store only:</p>
-      <ul>
-        <li>Your username and display name</li>
-        <li>Your public encryption key</li>
-        <li>Group membership information</li>
-        <li>Encrypted message payloads (temporary relay only)</li>
-      </ul>
-
-      <h3>4.3 Encryption</h3>
-      <p>We use industry-standard X25519 key exchange and AES-256-GCM encryption — the same standard used by governments and financial institutions worldwide. Your private encryption key is stored only on your device and is never transmitted to our servers.</p>
-
-      <h3>4.4 Security Features</h3>
-      <ul>
-        <li>App Lock with password protection</li>
-        <li>Biometric authentication (Face ID / Touch ID)</li>
-        <li>Termination password to instantly wipe all local data</li>
-        <li>Disappearing messages with automatic deletion</li>
-        <li>Admin recovery code for group access recovery</li>
-      </ul>
-    </div>
-
-    <!-- Section 5 -->
-    <div class="section">
-      <h2>5. Data Sharing</h2>
-      <p>We do not sell, trade, or share your personal information with third parties except the following service providers who help us operate the app:</p>
-      <ul>
-        <li>Cloud database provider — message relay and user data storage</li>
-        <li>Push notification service provider — delivering notifications only</li>
-        <li>Subscription management provider — subscription status only</li>
-        <li>Apple — App Store and in-app purchase processing</li>
-      </ul>
-
-      <h3>5.1 Legal Requirements</h3>
-      <div class="warning-box">
-        <p>⚠️ We may disclose information if required by law. However, due to our end-to-end encryption architecture, we are technically unable to provide readable message content even if legally required to do so.</p>
-      </div>
-    </div>
-
-    <!-- Section 6 -->
-    <div class="section">
-      <h2>6. Data Retention</h2>
-
-      <h3>6.1 Messages</h3>
-      <p>Messages are stored locally on your device. You control deletion through manual deletion, disappearing messages feature, termination password, or deleting the app.</p>
-
-      <h3>6.2 Account Data</h3>
-      <p>Your username, display name, and public key remain in our database until you delete your account.</p>
-
-      <h3>6.3 Account Deletion</h3>
-      <p>To delete your account, contact us at <strong style="color:#6C63FF">support@yallawin.net</strong>. We will remove your data from our servers within 30 days.</p>
-    </div>
-
-    <!-- Section 7 -->
-    <div class="section">
-      <h2>7. Children's Privacy</h2>
-      <p>Mastoor is designed for family use including children under parental supervision. We do not knowingly collect personal information from children under 13 without parental consent. Parents and guardians are responsible for supervising their children's use of the app.</p>
-    </div>
-
-    <!-- Section 8 -->
-    <div class="section">
-      <h2>8. Your Rights</h2>
-      <p>Depending on your location, you may have the right to:</p>
-      <ul>
-        <li>Access your personal data</li>
-        <li>Correct inaccurate data</li>
-        <li>Delete your data</li>
-        <li>Object to processing of your data</li>
-        <li>Data portability</li>
-      </ul>
-      <p>To exercise these rights, contact us at <strong style="color:#6C63FF">support@yallawin.net</strong></p>
-    </div>
-
-    <!-- Section 9 -->
-    <div class="section">
-      <h2>9. GDPR Compliance (European Users)</h2>
-      <ul>
-        <li>Legal basis for processing: Legitimate interest and consent</li>
-        <li>Data Controller: Machkit LTD</li>
-        <li>You have the right to lodge a complaint with your local data protection authority</li>
-      </ul>
-    </div>
-
-    <!-- Section 10 -->
-    <div class="section">
-      <h2>10. California Privacy Rights (CCPA)</h2>
-      <p>California residents have the right to know what personal information is collected, access their personal information, and request deletion. <strong style="color:#4CAF50">We do not sell personal information.</strong></p>
-    </div>
-
-    <!-- Section 11 -->
-    <div class="section">
-      <h2>11. Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. We will notify you of significant changes through the app. Continued use of Mastoor after changes constitutes acceptance of the updated policy.</p>
-    </div>
-
-    <!-- Contact -->
-    <div class="contact-box">
-      <h2 style="color:#fff; border:none;">Contact Us</h2>
-      <p style="color:#8A8A9A; margin-bottom:16px;">Machkit LTD</p>
-      <p style="color:#B0B0C0; margin-bottom:8px;">Privacy requests: <a href="mailto:support@yallawin.net">support@yallawin.net</a></p>
-      <p style="color:#B0B0C0;">Support: <a href="mailto:support@machkit.com">support@yallawin.net</a></p>
-    </div>
-
+  <h3>4.2 Server Storage</h3>
+  <p>Our servers store only:</p>
+  <ul>
+    <li>Your username and display name</li>
+    <li>Your public encryption key</li>
+    <li>Group membership information</li>
+    <li>Encrypted message payloads (temporary relay only — automatically deleted after <strong>30 days</strong> or upon delivery, whichever comes first)</li>
+  </ul>
+  <div class="highlight-box">
+    📦 <strong>Message Relay Policy:</strong> Encrypted messages are temporarily stored on our servers solely to ensure delivery to recipients who may be offline. Once delivered to the recipient's device, the encrypted payload is deleted from our servers. Undelivered messages are automatically purged after <strong>30 days</strong>. At no point can we read the content of any message.
   </div>
 
-  <div class="footer">
-    © 2026 Machkit LTD. All rights reserved. — Mastoor App
+  <h3>4.3 Encryption</h3>
+  <p>We use industry-standard X25519 key exchange and AES-256-GCM encryption. Your private encryption key is stored only on your device and is never transmitted to our servers.</p>
+
+  <h3>4.4 Security Features</h3>
+  <ul class="yes-list">
+    <li>App Lock with password protection</li>
+    <li>Biometric authentication (Face ID / Touch ID)</li>
+    <li>Termination password to instantly wipe all local data</li>
+    <li>Disappearing messages with automatic deletion</li>
+    <li>Admin recovery code for group access recovery</li>
+  </ul>
+
+  <h2>5. Data Sharing</h2>
+  <p>We do not sell, trade, or share your personal information with third parties except the following service providers who help us operate the app:</p>
+  <ul>
+    <li>Cloud database provider — message relay and user data storage</li>
+    <li>Push notification service provider — delivering notifications only</li>
+    <li>Subscription management provider — subscription status only</li>
+    <li>Apple — App Store and in-app purchase processing</li>
+  </ul>
+
+  <h3>5.1 Legal Requirements</h3>
+  <div class="warning-box">
+    ⚠️ We may disclose information if required by law. However, due to our end-to-end encryption architecture, we are technically unable to provide readable message content even if legally required to do so.
   </div>
 
+  <h2>6. Data Retention</h2>
+  <h3>6.1 Messages</h3>
+  <p>Messages are stored locally on your device. Encrypted message payloads on our relay servers are deleted upon delivery or after 30 days, whichever comes first. You control local deletion through manual deletion, disappearing messages feature, termination password, or deleting the app.</p>
+
+  <h3>6.2 Account Data</h3>
+  <p>Your username, display name, and public key remain in our database until you delete your account.</p>
+
+  <h3>6.3 Account Deletion</h3>
+  <p>To delete your account, contact us at <a href="mailto:support@yallawin.net">support@yallawin.net</a>. We will remove your data from our servers within 30 days.</p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>Mastoor is designed for family use including children under parental supervision. We do not knowingly collect personal information from children under 13 without parental consent. Parents and guardians are responsible for supervising their children's use of the app.</p>
+
+  <h2>8. Your Rights</h2>
+  <p>Depending on your location, you may have the right to access, correct, delete, or port your personal data, or object to its processing. To exercise these rights, contact us at <a href="mailto:support@yallawin.net">support@yallawin.net</a>.</p>
+
+  <h2>9. GDPR Compliance (European Users)</h2>
+  <ul>
+    <li>Legal basis for processing: Legitimate interest and consent</li>
+    <li>Data Controller: Machkit LTD</li>
+    <li>You have the right to lodge a complaint with your local data protection authority</li>
+  </ul>
+
+  <h2>10. California Privacy Rights (CCPA)</h2>
+  <p>California residents have the right to know what personal information is collected, access their personal information, and request deletion. <strong>We do not sell personal information.</strong></p>
+
+  <h2>11. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. We will notify you of significant changes through the app. Continued use of Mastoor after changes constitutes acceptance of the updated policy.</p>
+
+  <h2>Contact Us</h2>
+  <p>Machkit LTD<br>
+  Privacy requests: <a href="mailto:support@yallawin.net">support@yallawin.net</a><br>
+  Support: <a href="mailto:support@yallawin.net">support@yallawin.net</a></p>
+
+</div>
+
+<footer>© 2026 Machkit LTD. All rights reserved. — Mastoor App</footer>
 </body>
 </html>
-EOF
